@@ -1,0 +1,112 @@
+/* Error State Styles */
+@import './variables.css';
+
+.error-card-state {
+  width: 100%;
+  background-color: #fff8f8;
+  border: 2px solid #e07a7a;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(217, 75, 75, 0.08);
+}
+
+.error-icon-badge {
+  width: 48px;
+  height: 48px;
+  background-color: #fee2e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-badge-icon {
+  color: #dc2626;
+}
+
+.error-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 460px;
+}
+
+.error-heading {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #991b1b;
+}
+
+.error-description {
+  font-size: 0.825rem;
+  line-height: 1.5;
+  color: #7f1d1d;
+}
+
+.error-breed-hint {
+  font-size: 0.775rem;
+  color: var(--color-text-olive);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px dashed rgba(60, 71, 34, 0.25);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.error-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.error-retry-action {
+  background-color: var(--color-btn-blue);
+  color: var(--color-btn-blue-text);
+  border: 2px solid var(--color-canvas-border);
+  border-radius: var(--radius-pill);
+  padding: 8px 18px;
+  font-family: var(--font-body);
+  font-size: 0.825rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 0 #283754;
+  transition: transform 0.1s ease;
+}
+
+.error-retry-action:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.error-retry-action:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-docs-link {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6c7c4c;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  transition: color 0.15s ease;
+}
+
+.error-docs-link:hover {
+  color: var(--color-text-main);
+  text-decoration: underline;
+}
