@@ -1,15 +1,17 @@
+@import './variables.css';
+
 /* Navbar and Top Announcement Styles */
 .site-navigation {
   width: 100%;
-  background-color: #fcf8ef;
+  background-color: var(--color-header-bg);
   position: relative;
   z-index: 30;
 }
 
 /* Announcement Bar */
 .announcement-bar {
-  background-color: #5c6836;
-  color: #eff5d3;
+  background-color: var(--color-announcement-bg);
+  color: var(--color-announcement-text);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -34,7 +36,7 @@
 }
 
 .flower-icon {
-  color: #fad02c;
+  color: var(--color-accent-gold);
   font-size: 13px;
   line-height: 1;
 }
@@ -45,7 +47,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 28px 10px;
-  background-color: #fcf8ef;
+  background-color: var(--color-header-bg);
 }
 
 /* Brand Logo */
@@ -54,7 +56,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: #2b3618;
+  color: var(--color-text-main);
   cursor: pointer;
 }
 
@@ -69,7 +71,7 @@
   font-size: 11px;
   letter-spacing: -0.02em;
   font-weight: 500;
-  color: #5c6836;
+  color: var(--color-announcement-bg);
 }
 
 .brand-logo-main {
@@ -78,12 +80,12 @@
   display: inline-flex;
   align-items: center;
   letter-spacing: -0.05em;
-  color: #2b3618;
+  color: var(--color-text-main);
 }
 
 .logo-paw-icon {
   margin: 0 1px;
-  color: #e07a38;
+  color: var(--color-accent-orange);
 }
 
 .brand-title {
@@ -91,7 +93,7 @@
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #2b3618;
+  color: var(--color-text-main);
   display: none;
 }
 
@@ -114,7 +116,7 @@
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: #3f4d25;
+  color: var(--color-text-olive);
   cursor: pointer;
   padding: 6px 4px;
   position: relative;
@@ -126,7 +128,7 @@
 
 .nav-link:hover,
 .nav-link-btn:hover {
-  color: #1a220e;
+  color: var(--color-text-main);
 }
 
 .nav-link.active::after,
@@ -137,12 +139,12 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: #3f4d25;
+  background-color: var(--color-canvas-border);
   border-radius: 2px;
 }
 
 .nav-badge {
-  background-color: #e05353;
+  background-color: var(--color-accent-red);
   color: #ffffff;
   font-size: 10px;
   font-weight: 800;
@@ -160,7 +162,7 @@
 .action-btn {
   background: none;
   border: none;
-  color: #3f4d25;
+  color: var(--color-text-olive);
   cursor: pointer;
   padding: 6px;
   border-radius: 50%;
@@ -173,7 +175,7 @@
 }
 
 .action-btn:hover {
-  color: #1a220e;
+  color: var(--color-text-main);
   transform: translateY(-1px);
 }
 
@@ -181,7 +183,7 @@
   position: absolute;
   top: -2px;
   right: -4px;
-  background-color: #e05353;
+  background-color: var(--color-accent-red);
   color: #ffffff;
   font-size: 9px;
   font-weight: 800;

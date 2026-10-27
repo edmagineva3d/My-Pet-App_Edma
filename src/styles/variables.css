@@ -1,0 +1,63 @@
+/* Coordinated Color Palette & Design Tokens */
+:root {
+  /* Outer frame and background */
+  --color-outer-bg: #f5b82e;
+  --color-outer-bg-hover: #e8ab22;
+  --color-canvas-border: #3c4722;
+  --color-canvas-shadow: rgba(60, 71, 34, 0.18);
+
+  /* Navigation & header */
+  --color-announcement-bg: #5c6836;
+  --color-announcement-text: #eff5d3;
+  --color-header-bg: #fcf8ef;
+  --color-header-border: #3c4722;
+
+  /* Hero Section */
+  --color-hero-sky: #adc6eb;
+  --color-hero-sky-soft: #b8cff1;
+  --color-cloud-white: #ffffff;
+  --color-cloud-shadow: #9bb7e0;
+  
+  /* Rolling Hills & Meadow Landscape */
+  --color-hill-back: #8db55b;
+  --color-hill-mid: #a5c76f;
+  --color-hill-front: #bcd986;
+  --color-hill-stroke: #3c4722;
+  
+  /* Content Section */
+  --color-content-bg: #cde29e;
+  --color-card-bg: #ffffff;
+  --color-card-border: #3c4722;
+  --color-card-matting: #f9fbf5;
+
+  /* Typography */
+  --color-text-main: #232f48;
+  --color-text-heading: #2c3a59;
+  --color-text-olive: #3c4722;
+  --color-text-muted: #536233;
+  --color-text-subtle: #6c7c4c;
+
+  /* Interactive Elements */
+  --color-btn-blue: #adc6eb;
+  --color-btn-blue-hover: #9ec0ec;
+  --color-btn-blue-active: #8db3e4;
+  --color-btn-blue-text: #1d2b45;
+
+  /* Accent & Decorative Palette */
+  --color-accent-gold: #fad02c;
+  --color-accent-orange: #e07a38;
+  --color-accent-red: #d94b4b;
+  --color-accent-pink: #f28da7;
+  --color-accent-wood: #c48c59;
+  --color-accent-roof: #af6637;
+  --color-accent-stone: #d3deba;
+
+  /* Shadows & Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+  --shadow-card: 0 4px 14px rgba(60, 71, 34, 0.08);
+  --shadow-btn: 0 3px 0 #283754;
+  --shadow-btn-pressed: 0 1px 0 #283754;
+}
