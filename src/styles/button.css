@@ -1,0 +1,97 @@
+/* Primary Action Button ("Fetch Again" - matching reference "Add to Cart") */
+@import './variables.css';
+
+.fetch-again-button {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-btn-blue);
+  color: var(--color-btn-blue-text);
+  border: 2px solid var(--color-canvas-border);
+  border-radius: var(--radius-pill);
+  padding: 13px 24px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #283754;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fetch-again-button:hover:not(:disabled) {
+  background-color: var(--color-btn-blue-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 #283754;
+}
+
+.fetch-again-button:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #283754;
+}
+
+.fetch-again-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(173, 198, 235, 0.8), 0 4px 0 #283754;
+}
+
+.fetch-again-button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button-inner-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.fetch-icon {
+  transition: transform 0.3s ease;
+}
+
+.fetch-icon.spinning {
+  animation: spinCw 1s linear infinite;
+}
+
+@keyframes spinCw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button-divider {
+  opacity: 0.6;
+  font-size: 0.9em;
+}
+
+.button-breed-tag {
+  font-size: 0.825rem;
+  letter-spacing: 0.04em;
+}
+
+.button-sparkle-decor {
+  position: absolute;
+  right: 18px;
+  color: #ffffff;
+  opacity: 0.85;
+}
+
+@media (max-width: 480px) {
+  .fetch-again-button {
+    padding: 12px 18px;
+    font-size: 0.8rem;
+  }
+  .button-sparkle-decor {
+    display: none;
+  }
+}
