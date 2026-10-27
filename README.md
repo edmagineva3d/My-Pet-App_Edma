@@ -268,6 +268,8 @@ These messages describe the intended development sequence. The actual Git histor
 - **Technology:** React, TypeScript, and Vite
 - **Year:** 2026
 
+**[Live Demo](https://my-pet-app-edma.vercel.app/)**
+
 ## 📌 Note
 
 My Pet App was created as a student project to demonstrate frontend development, API integration, React state management, and responsive web design.
