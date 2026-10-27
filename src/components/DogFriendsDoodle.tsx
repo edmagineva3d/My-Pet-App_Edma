@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function DogFriendsDoodle() {
   return (
     <div className="dog-friends-cluster" aria-label="Cute doodle pets cluster in the meadow">

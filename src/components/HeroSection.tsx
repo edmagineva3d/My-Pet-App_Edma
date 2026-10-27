@@ -1,8 +1,8 @@
-import React from 'react'
+import type { ReactNode } from 'react'
 import '../styles/hero.css'
 
 interface HeroSectionProps {
-  children?: React.ReactNode
+  children?: ReactNode
 }
 
 export default function HeroSection({ children }: HeroSectionProps) {

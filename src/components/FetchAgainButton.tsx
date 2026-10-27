@@ -1,4 +1,3 @@
-import React from 'react'
 import { RefreshCw, Sparkles } from 'lucide-react'
 import '../styles/button.css'
 

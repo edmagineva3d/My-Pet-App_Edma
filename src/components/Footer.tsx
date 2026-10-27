@@ -1,5 +1,4 @@
-import React from 'react'
-import { PawPrint, Heart, ExternalLink, Github, Code2, Globe } from 'lucide-react'
+import { PawPrint, ExternalLink, Github, Code2, Globe } from 'lucide-react'
 import '../styles/footer.css'
 
 export default function Footer() {

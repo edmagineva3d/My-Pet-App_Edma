@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { PawPrint, ImageOff, RefreshCw, ZoomIn } from 'lucide-react'
 import '../styles/viewer.css'
 

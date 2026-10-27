@@ -1,4 +1,4 @@
-import React, { useId } from 'react'
+import { useId, type ChangeEvent } from 'react'
 import { ChevronDown, Sparkles, AlertCircle, RefreshCw } from 'lucide-react'
 import type { BreedOption } from '../types/dog'
 import '../styles/selector.css'
@@ -24,7 +24,7 @@ export default function BreedSelector({
 }: BreedSelectorProps) {
   const selectId = useId()
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     onSelectBreed(e.target.value)
   }
 

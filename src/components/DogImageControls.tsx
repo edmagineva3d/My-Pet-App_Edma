@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Heart, Share2, Shuffle, Check, Sparkles } from 'lucide-react'
 import '../styles/controls.css'
 
@@ -40,8 +40,8 @@ export default function DogImageControls({
         className={`ctrl-btn fav-toggle-btn ${isFavorite ? 'is-fav' : ''}`}
         onClick={onToggleFavorite}
         disabled={disabled || !imageUrl}
-        title={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
-        aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+        title={isFavorite ? `Remove ${breedLabel} from favorites` : `Add ${breedLabel} to favorites`}
+        aria-label={isFavorite ? `Remove ${breedLabel} from favorites` : `Add ${breedLabel} to favorites`}
       >
         <Heart
           size={17}

@@ -1,5 +1,4 @@
-import React from 'react'
-import { Heart, Trash2, ExternalLink, Sparkles } from 'lucide-react'
+import { Heart, Trash2, ExternalLink } from 'lucide-react'
 import type { FavoriteDog } from '../types/dog'
 import '../styles/favorites.css'
 

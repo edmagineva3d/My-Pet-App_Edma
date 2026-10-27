@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function DogThemedDecor() {
   return (
     <div className="dog-decorations-layer" aria-hidden="true">

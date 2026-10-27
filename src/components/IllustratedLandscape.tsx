@@ -1,4 +1,3 @@
-import React from 'react'
 import DogFriendsDoodle from './DogFriendsDoodle'
 import DogThemedDecor from './DogThemedDecor'
 import '../styles/landscape.css'

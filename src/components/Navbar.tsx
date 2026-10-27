@@ -1,4 +1,4 @@
-import React from 'react'
+import type { MouseEvent } from 'react'
 import { PawPrint, Heart, Search, HelpCircle } from 'lucide-react'
 import '../styles/navbar.css'
 
@@ -15,7 +15,7 @@ export default function Navbar({
   onToggleFavorites,
   isFavoritesOpen = false,
 }: NavbarProps) {
-  const handleNavClick = (e: React.MouseEvent, targetId: string) => {
+  const handleNavClick = (e: MouseEvent, targetId: string) => {
     e.preventDefault()
     if (onNavigate) {
       onNavigate(targetId)

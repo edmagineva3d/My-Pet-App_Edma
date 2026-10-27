@@ -1,4 +1,3 @@
-import React from 'react'
 import { AlertCircle, RefreshCw, HelpCircle } from 'lucide-react'
 import '../styles/error.css'
 

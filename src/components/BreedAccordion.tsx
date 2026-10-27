@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Sparkles, Bone, Heart, ChevronDown } from 'lucide-react'
+import { useState } from 'react'
 import '../styles/accordion.css'
 
 interface BreedAccordionProps {
