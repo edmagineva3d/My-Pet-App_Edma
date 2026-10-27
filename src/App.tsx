@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar'
+import HeroSection from './components/HeroSection'
 import './styles/layout.css'
 
 export default function App() {
@@ -22,7 +23,7 @@ export default function App() {
         </header>
 
         <section className="canvas-hero-region">
-          {/* Illustrated Hero & Landscape */}
+          <HeroSection />
         </section>
 
         <main className="canvas-content-region">
