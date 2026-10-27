@@ -1,0 +1,94 @@
+/* Typography Styles and Hierarchy */
+@import './variables.css';
+
+:root {
+  --font-display: 'Fredoka', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, cursive, sans-serif;
+  --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  color: var(--color-text-heading);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Body & Descriptions */
+body, p, span, label, input, select, button {
+  font-family: var(--font-body);
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.intro-story-heading {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.intro-story-body {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--color-text-olive);
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Micro-copy & Badges */
+.badge-text {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.caption-text {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-text-subtle);
+}
+
+.price-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-text-heading);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .intro-story-body {
+    font-size: 0.75rem;
+  }
+}
