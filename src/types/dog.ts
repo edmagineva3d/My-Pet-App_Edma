@@ -50,3 +50,4 @@ export interface BreedDetails {
   history: string
   careTips: string
 }
+

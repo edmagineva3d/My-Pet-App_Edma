@@ -1,194 +1,235 @@
-# 🐾 My Pet App — Meet Your Furry Friends
+ <p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fredoka&size=28&duration=3000&pause=1000&color=EAB308&center=true&vCenter=true&width=650&lines=Welcome+to+My+Pet+App!;Explore+Your+Favorite+Dog+Breeds!;Fetch+Cute+Dog+Photos+Again!;Made+with+React%2C+TypeScript+%26+Vite" alt="Typing SVG" />
+</p>
 
-A whimsical, highly polished React + TypeScript application for exploring dog breeds and fetching photos, redesigned to closely recreate the art-directed visual language and composition of the reference design.
+<h1 align="center">🐾 My Pet App</h1>
 
-![My Pet App](https://img.shields.io/badge/React-18-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue)
-![Vite](https://img.shields.io/badge/Vite-6.0-purple)
-![Dog%20CEO%20API](https://img.shields.io/badge/Dog%20CEO%20API-Live-brightgreen)
+<p align="center">
+  <strong>Meet Your Furry Friends!</strong>
+</p>
 
----
+<p align="center">
+  My Pet App is a dog-breed image browsing website built with <strong>React, TypeScript, and Vite</strong>. Users can explore different dog breeds, view random dog photos, and fetch another image without changing their selected breed. The website features a playful illustrated landscape, animated paw prints, floating dog-themed decorations, and a colorful, responsive design.
+</p>
 
-## 🎨 Visual Design & Reference Fidelity
-
-This redesign carefully reproduces the visual language, proportions, colors, typography, spacing, illustrations, and layout hierarchy of the reference design:
-
-1. **Outer Frame & Canvas Composition**:
-   - Bright warm yellow outer background (`#f5b82e`) framing a centered website canvas (`max-width: 780px`).
-   - Muted dark olive border (`2px solid #3c4722`) with soft rounded corners.
-   - Vertical design tag on the right margin matching the reference editorial styling.
-
-2. **Navigation Header & Scalloped Fringe**:
-   - Olive green announcement bar with repeating blossom emojis and benefit messages.
-   - Warm cream navigation bar (`#fcf8ef`) with a custom playful doodle logo, navigation links (`HOME`, `EXPLORE BREEDS`, `FAVORITES`, `ABOUT`), and heart counter badge.
-   - Hand-crafted SVG scalloped wave border that hangs into the sky below.
-
-3. **Illustrated Hero Landscape**:
-   - Soft powder-blue sky (`#adc6eb`) with floating clouds and flying birds.
-   - Pillowy white cloud badge holding the hero title: **"Meet Your Furry Friends"** in Fredoka display font, accompanied by playful curled flourishes.
-   - Subtitle: *"welcome to petopia! Explore different breeds, one adorable photo at a time."*
-   - Layered rolling pale-green hills (`#bcd986`, `#a5c76f`, `#8db55b`).
-   - Hand-drawn decorative elements:
-     - Cozy wooden cottage/doghouse with chimney and rising smoke puff.
-     - Stepping stone pebble path leading down the right hill.
-     - Fluffy cartoon trees and red fly-agaric spotted mushrooms.
-     - Illustrated meadow doodle pets cluster (Spaniel, Poodle, Golden pup, Shiba, and Corgi in a dog basket).
-
-4. **Editorial Product-Style Dog Showcase (Lower Section)**:
-   - **Left Column**: Framed white matting card with dark olive border, showcasing the fetched dog photo with zoom toggle and a strip of 7 square thumbnail snapshots underneath.
-   - **Right Column**:
-     - Breed Title with custom yellow watering can / dog bowl badge.
-     - Price/Status tag: *"100% Good Dog • Free to love"*.
-     - Custom accessible dropdown: *"Choose a Dog Breed"* populated with 140+ breeds and sub-breeds.
-     - Primary button: Wide powder-blue pill button labeled **"FETCH AGAIN • NEW PHOTO 🐾"** with tactile 3D press effect and spinning refresh icon.
-     - Secondary controls: Favorite heart toggle, Copy image link with tooltip feedback, Surprise random breed picker, and Petopia verification badge.
-     - Editorial narrative description with *"Featuring:"* bullet points.
-     - Three expandable accordions matching the reference (*Signature Traits*, *Breed Heritage*, *Care & Happiness Guide*).
-
-5. **Additional Sections & Footer**:
-   - **Explore More Breeds**: Curated quick-select cards with emojis and descriptions.
-   - **My Favorite Dogs**: Saved collection with photo thumbnails, removal, and quick inspection stored persistently in `localStorage`.
-   - **Warm Cream Footer**: Links to official Dog CEO documentation, GitHub profile `edmagineva3d`, copyright notice, and back-to-top button.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-6.0-646CFF?logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Dog%20CEO%20API-REST-65A30D" alt="Dog CEO API" />
+</p>
 
 ---
 
-## 🐶 Dog CEO API Integration
+## ✨ Features
 
-All canine data and photos are fetched live from the official open-source Dog CEO API:
+- 🐶 Explore different dog breeds using a breed dropdown.
+- 🖼️ Fetch random dog images from the Dog CEO API.
+- 🔄 Fetch another photo while keeping the currently selected breed.
+- 🐕 Load available breeds dynamically from the API.
+- 🐾 Animated paw prints and floating dog-themed decorations.
+- ☁️ Illustrated clouds, rolling hills, and a playful landscape.
+- 🎨 Bright yellow, powder-blue, cream, and soft green color palette.
+- ✨ Smooth transitions, hover effects, and animated interface elements.
+- 🔄 Loading indicators while fetching dog images.
+- ⚠️ Error messages and retry options when an API request fails.
+- ❤️ Save favorite dog images using browser localStorage.
+- 🔎 Explore additional breeds using quick-selection controls.
+- 📋 Copy a dog image link when the feature is available.
+- 📱 Responsive layout for desktop, tablet, and mobile devices.
+- ♿ Accessible controls, keyboard navigation, and reduced-motion support.
 
-- **Official API Documentation**: [https://dog.ceo/dog-api/documentation/](https://dog.ceo/dog-api/documentation/)
-- **API Homepage**: [https://dog.ceo/dog-api/](https://dog.ceo/dog-api/)
-- **Breeds List Endpoint**:
-  ```
-  GET https://dog.ceo/api/breeds/list/all
-  ```
-- **Random Breed Image Endpoint**:
-  ```
-  GET https://dog.ceo/api/breed/{breed}/images/random
-  ```
-- **Sub-breed Endpoint Support**:
-  ```
-  GET https://dog.ceo/api/breed/{breed}/{subBreed}/images/random
-  ```
-  *(e.g., `corgi/cardigan`, `retriever/golden`, `hound/afghan`)*
-- **Multiple Breed Images Endpoint (Thumbnails)**:
-  ```
-  GET https://dog.ceo/api/breed/{breed}/images/random/7
-  ```
+## 🎨 Design and Animations
 
-### Guarantees & Resilience:
-- **Strict Breed Preservation**: Pressing "Fetch Again" guarantees that the new image strictly belongs to the currently selected breed.
-- **Race Condition Protection**: Uses `AbortController` to cancel in-flight requests when switching breeds rapidly.
-- **Graceful Fallbacks**: Includes curated popular presets if network access is offline or throttled.
+My Pet App uses a playful illustrated website design with a bright yellow outer frame, a cream-colored navigation bar, a powder-blue sky, and soft green hills.
 
----
+The visual design includes:
 
-## 🛠️ Technologies & Architecture
+- **Animated paw prints:** Floating paw decorations move gently around the page.
+- **Floating bones and sparkles:** Small decorative elements add movement without distracting from the main content.
+- **Animated clouds:** Clouds drift slowly across the illustrated sky.
+- **Playful typography:** Fredoka for headings and Nunito for readable body text.
+- **Interactive buttons:** Smooth hover transitions and a tactile press effect.
+- **Dog image transitions:** Subtle animation when a new image loads.
+- **Responsive layout:** The website adjusts to different screen sizes.
+- **Reduced-motion support:** Nonessential animations are reduced when requested by the user's system settings.
 
-- **React 18** (`react`, `react-dom`): Functional components with modern hooks (`useState`, `useEffect`, `useCallback`, `useMemo`, `useRef`, `useId`).
-- **TypeScript**: Strict types across API responses, breed options, and component props.
-- **Vite 6**: Fast bundling, hot module replacement, and production asset optimization.
-- **CSS3 & CSS Custom Properties**: Reusable design tokens for colors, shadows, border radii, and typography.
-- **CSS Keyframes**: Hardware-accelerated animations (`transform`, `opacity`) with full `@media (prefers-reduced-motion: reduce)` support.
-- **Lucide React**: Clean, accessible iconography.
+The design follows a cheerful pet-themed visual style while keeping the dog image and breed selector as the main focus.
 
-### Directory Structure
+## 🐕 How Fetch Again Works
 
+The breed selector determines which type of dog image the application requests.
+
+1. Select an available breed from the dropdown.
+2. The application fetches and displays an image belonging to that breed.
+3. Click **Fetch Again** to request another random image.
+4. The selected breed remains unchanged.
+5. Select a different breed whenever you want to explore another type of dog.
+
+For example, selecting Corgi should display a Corgi image. Clicking Fetch Again should request another Corgi image instead of switching to a different breed.
+
+The available options depend on the breeds and sub-breeds supported by the API.
+
+## 🌐 Dog CEO API
+
+My Pet App uses the Dog CEO API to retrieve dog breeds and images.
+
+- **Official API Website:** https://dog.ceo/dog-api/
+- **API Documentation:** https://dog.ceo/dog-api/documentation/
+
+### Available Endpoints
+
+**1. Get all available dog breeds**
+
+```http
+GET https://dog.ceo/api/breeds/list/all
 ```
+
+Returns the available breeds and their supported sub-breeds.
+
+**2. Fetch a random image for a breed**
+
+```http
+GET https://dog.ceo/api/breed/{breed}/images/random
+```
+
+Example:
+
+```http
+GET https://dog.ceo/api/breed/beagle/images/random
+```
+
+**3. Fetch random images for a breed**
+
+```http
+GET https://dog.ceo/api/breed/beagle/images/random/7
+```
+
+This endpoint can be used to retrieve multiple images for thumbnail collections.
+
+### API Integration
+
+The application uses the JavaScript Fetch API to retrieve data from the external service.
+
+- Loads the breed list dynamically.
+- Updates the displayed image when the selected breed changes.
+- Preserves the selected breed when Fetch Again is clicked.
+- Handles loading states and unsuccessful requests.
+- Validates API responses before displaying images.
+- Supports breed-specific requests using the correct API endpoint.
+- Does not require an API key for the documented Dog CEO endpoints.
+
+**Note:** Not every dog breed is available through this API. The dropdown should use the actual breed list returned by the service instead of assuming that all breeds are supported.
+
+## 🛠️ Technologies Used
+
+- ⚛️ React
+- 📘 TypeScript
+- ⚡ Vite
+- 🎨 CSS3
+- 🌐 Dog CEO REST API
+- 🧩 Lucide React Icons
+- 💾 Browser localStorage
+- 🔄 React Hooks
+- ✨ CSS Keyframe Animations
+- ♿ Accessible and Responsive UI
+
+## 📂 Project Structure
+
+```text
 my-petApp_Edma/
 ├── public/
 ├── src/
-│   ├── api/ or services/
-│   │   └── dogApi.ts              # Dog CEO API client, endpoints & breed formatters
+│   ├── api/
+│   │   └── dogApi.ts
 │   ├── components/
-│   │   ├── Navbar.tsx             # Announcement bar, brand logo, nav links & scallop divider
-│   │   ├── HeroSection.tsx        # Hero container & pillowy cloud badge
-│   │   ├── IllustratedLandscape.tsx # SVG rolling hills, clouds, cottage, trees, mushrooms
-│   │   ├── DogFriendsDoodle.tsx   # Illustrated dog friends cluster in the meadow
-│   │   ├── DogThemedDecor.tsx     # Floating paw prints, bones, daisies, sparkles
-│   │   ├── BreedSelector.tsx      # Accessible dropdown with 140+ breeds
-│   │   ├── DogImageViewer.tsx     # Framed white card, zoom toggle, 7 thumbnail snapshots
-│   │   ├── FetchAgainButton.tsx   # Powder-blue pill button with tactile press & spinner
-│   │   ├── DogImageControls.tsx   # Favorite toggle, copy link, surprise pup button
-│   │   ├── BreedAccordion.tsx     # Expandable traits, facts, and care guide
-│   │   ├── ExploreBreeds.tsx      # Curated quick-select breed cards
-│   │   ├── FavoriteDogs.tsx       # Saved favorites grid with localStorage persistence
-│   │   ├── LoadingState.tsx       # Bouncing paw spinner and playful messages
-│   │   ├── ErrorState.tsx         # User-friendly error card with retry mechanism
-│   │   └── Footer.tsx             # Footer links, student credit, and back-to-top
+│   │   ├── Navbar.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── IllustratedLandscape.tsx
+│   │   ├── DogThemedDecor.tsx
+│   │   ├── BreedSelector.tsx
+│   │   ├── DogImageViewer.tsx
+│   │   ├── FetchAgainButton.tsx
+│   │   ├── FavoriteDogs.tsx
+│   │   ├── LoadingState.tsx
+│   │   ├── ErrorState.tsx
+│   │   └── Footer.tsx
 │   ├── hooks/
-│   │   ├── useDogBreeds.ts        # Hook for loading and caching Dog CEO breed list
-│   │   └── useDogImage.ts         # Hook for breed photo fetching, thumbnails, and state
+│   │   ├── useDogBreeds.ts
+│   │   └── useDogImage.ts
 │   ├── styles/
-│   │   ├── variables.css          # Color tokens, borders, and typography variables
-│   │   ├── typography.css         # Fredoka & Nunito font rules
-│   │   ├── layout.css             # Centered canvas, outer yellow frame, layout regions
-│   │   ├── navbar.css             # Header, announcement bar, scalloped divider
-│   │   ├── hero.css               # Hero cloud badge and typography
-│   │   ├── landscape.css          # SVG landscape, hills, cottage, doodle pets
-│   │   ├── viewer.css             # Framed dog card and thumbnail strip
-│   │   ├── button.css             # Powder-blue pill button styles
-│   │   ├── selector.css           # Custom styled dropdown styles
-│   │   ├── controls.css           # Image action buttons and badges
-│   │   ├── accordion.css          # Expandable accordion panels
-│   │   ├── explore.css            # Popular breed chips
-│   │   ├── favorites.css          # Favorites gallery and empty states
-│   │   ├── loading.css            # Paw bounce and stepping animation
-│   │   ├── error.css              # Error banner styling
-│   │   ├── animations.css         # Keyframes, floating paws, clouds, heart pop
-│   │   └── responsive.css         # Mobile and tablet media queries
+│   │   ├── variables.css
+│   │   ├── typography.css
+│   │   ├── layout.css
+│   │   ├── animations.css
+│   │   └── responsive.css
 │   ├── types/
-│   │   └── dog.ts                 # TypeScript interfaces for API and application state
-│   ├── App.tsx                    # Main orchestrator component
-│   └── main.tsx                   # React root entry point
-├── index.html                     # HTML shell with Google Fonts preconnect
+│   │   └── dog.ts
+│   ├── App.tsx
+│   └── main.tsx
+├── index.html
 ├── package.json
 ├── tsconfig.json
-├── tsconfig.app.json
-├── tsconfig.node.json
 └── vite.config.ts
 ```
 
----
+*The structure above is a suggested organization. Keep it consistent with the actual files in the project.*
 
-## 🚀 Getting Started
+## 🚀 How to Run
 
 ### Prerequisites
 
-- Node.js 18+ (tested on Node v24)
-- npm or pnpm
+- Node.js 18 or later
+- npm
+- Visual Studio Code or another code editor
 
-### Installation
+### 1. Clone the repository
 
-```bash
-# Install dependencies
+```powershell
+git clone https://github.com/edmagineva3d/My_Pet_App_Edma.git
+```
+
+### 2. Open the project folder
+
+```powershell
+cd My_Pet_App_Edma
+```
+
+### 3. Install the dependencies
+
+```powershell
 npm install
 ```
 
-### Running Locally
+### 4. Start the development server
 
-```bash
-# Start the Vite development server
+```powershell
 npm run dev
 ```
 
-Open your browser at `http://localhost:5173/` to view the application.
+### 5. Open the application
 
-### Building for Production
+Open the local URL displayed in your terminal. Vite commonly uses:
 
-```bash
-# Compile TypeScript and create production bundle
+```text
+http://localhost:5173
+```
+
+### 6. Build for production
+
+```powershell
 npm run build
+```
 
-# Preview the production build locally
+### 7. Preview the production build
+
+```powershell
 npm run preview
 ```
 
----
-
 ## 📜 Git Commit Progression
 
-This project features a clean, chronological commit history of exactly 27 commits documenting every step of development:
+The project development is organized around the following 27 student-style commit messages:
 
 1. `start the my pet app project`
 2. `set up vite and react with typescript`
@@ -218,11 +259,29 @@ This project features a clean, chronological commit history of exactly 27 commit
 26. `test the app and fix remaining issues`
 27. `finish the my pet app documentation`
 
----
+These messages describe the intended development sequence. The actual Git history should reflect the changes performed in each commit.
 
 ## 👤 Author
 
-- **Developer**: edmagineva3d
-- **Email**: edmagineva11@gmail.com
-- **Project**: My Pet App (Redesign)
-- **Year**: 2026
+- **Developer:** edmagineva3d
+- **Project:** My Pet App
+- **Technology:** React, TypeScript, and Vite
+- **Year:** 2026
+
+## 📌 Note
+
+My Pet App was created as a student project to demonstrate frontend development, API integration, React state management, and responsive web design.
+
+Dog images and breed information are retrieved from the Dog CEO API. Internet access is required to fetch live data and load externally hosted fonts.
+
+Favorite images are stored locally in the current browser when the favorites feature is enabled. They are not automatically synchronized between different devices.
+
+---
+
+<p align="center">
+  <strong>My Pet App — Explore Breeds, Fetch Cute Photos, and Meet Your Furry Friends! 🐾</strong>
+</p>
+
+<p align="center">
+  Made with ❤️ using React, TypeScript, and Vite.
+</p>
