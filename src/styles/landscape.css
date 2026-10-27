@@ -88,28 +88,70 @@
   display: block;
 }
 
+/* Dog Friends Doodle Cluster in Middle Meadow */
+.dog-friends-cluster {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 195px;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.doodle-pets-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 3px 2px rgba(60, 71, 34, 0.15));
+}
+
+/* Dog Themed Floating Decorations Layer */
+.dog-decorations-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 6;
+}
+
+.decor-item {
+  position: absolute;
+  pointer-events: none;
+}
+
+.paw-pos-1 {
+  bottom: 80px;
+  left: 45px;
+}
+
+.paw-pos-2 {
+  top: 140px;
+  right: 50px;
+}
+
+.bone-pos-1 {
+  bottom: 50px;
+  right: 180px;
+}
+
+.flower-pos-1 {
+  bottom: 65px;
+  left: 175px;
+}
+
+.sparkle-pos-1 {
+  top: 100px;
+  left: 140px;
+}
+
 @media (max-width: 600px) {
-  .cloud-1 {
-    width: 70px;
-    height: 35px;
-    top: 24px;
-    left: 3%;
-  }
-  .cloud-2 {
-    display: none;
-  }
-  .cloud-3 {
-    width: 75px;
-    height: 38px;
-    right: 3%;
-    top: 30px;
-  }
-  .sky-birds {
-    right: 12%;
-    top: 60px;
-    width: 36px;
-  }
-  .hills-svg-container {
-    height: 260px;
+  .dog-friends-cluster {
+    width: 220px;
+    height: 155px;
+    bottom: 8px;
   }
 }

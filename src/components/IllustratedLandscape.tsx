@@ -1,9 +1,14 @@
 import React from 'react'
+import DogFriendsDoodle from './DogFriendsDoodle'
+import DogThemedDecor from './DogThemedDecor'
 import '../styles/landscape.css'
 
 export default function IllustratedLandscape() {
   return (
     <div className="landscape-wrap" aria-hidden="true">
+      {/* Dog Themed Decorations */}
+      <DogThemedDecor />
+
       {/* Sky Clouds and Distant Birds */}
       <div className="sky-elements">
         {/* Upper Left Cloud */}
@@ -180,6 +185,9 @@ export default function IllustratedLandscape() {
           </g>
         </svg>
       </div>
+
+      {/* Illustrated Doodle Pet Friends in the Meadow */}
+      <DogFriendsDoodle />
     </div>
   )
 }
