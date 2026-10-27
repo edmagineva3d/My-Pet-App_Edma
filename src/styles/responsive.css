@@ -1,0 +1,76 @@
+/* Responsive Layout Adjustments */
+@import './variables.css';
+
+/* Tablets and Medium Screens (<= 768px) */
+@media (max-width: 768px) {
+  .app-frame {
+    padding: 16px 12px 32px;
+  }
+
+  .outer-credit-tag {
+    display: none;
+  }
+
+  .site-canvas {
+    max-width: 100%;
+  }
+
+  /* Stack product showcase into single column */
+  .dog-product-showcase-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .showcase-right-col {
+    gap: 16px;
+  }
+
+  .canvas-content-region {
+    padding: 20px 16px 32px;
+    gap: 24px;
+  }
+
+  .editorial-breed-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* Mobile Devices (<= 480px) */
+@media (max-width: 480px) {
+  .app-frame {
+    padding: 0;
+  }
+
+  .site-canvas {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .canvas-content-region {
+    padding: 16px 12px 28px;
+    gap: 20px;
+  }
+
+  .intro-story-heading {
+    font-size: 1.05rem;
+  }
+
+  .intro-story-body {
+    font-size: 0.775rem;
+  }
+
+  .editorial-breed-title {
+    font-size: 1.25rem;
+  }
+
+  .fetch-again-button {
+    padding: 14px 20px;
+    font-size: 0.825rem;
+  }
+
+  .ctrl-btn {
+    padding: 6px 10px;
+    font-size: 0.725rem;
+  }
+}
