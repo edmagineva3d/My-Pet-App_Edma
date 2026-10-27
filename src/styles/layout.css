@@ -1,5 +1,6 @@
 @import './variables.css';
 @import './typography.css';
+@import './animations.css';
 
 /* Main Application Layout */
 * {

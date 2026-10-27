@@ -1,0 +1,151 @@
+/* Subtle Decorative Animations */
+
+/* Cloud Drifting */
+@keyframes floatCloudLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(14px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatCloudRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-16px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Floating Paw Prints */
+@keyframes floatPaw {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(-12px) rotate(6deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.55;
+  }
+}
+
+/* Floating Dog Bone */
+@keyframes floatBone {
+  0% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(4deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+}
+
+/* Twinkling Sparkle */
+@keyframes pulseSparkle {
+  0%, 100% {
+    transform: scale(0.9) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+/* Gentle Bobbing for Doodle Pets */
+@keyframes gentlePetBob {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-3px);
+  }
+}
+
+/* Chimney Smoke Drift */
+@keyframes smokeRise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-4px) scale(1.08);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Applying Animations */
+.cloud-1 {
+  animation: floatCloudLeft 14s ease-in-out infinite;
+}
+
+.cloud-2 {
+  animation: floatCloudRight 18s ease-in-out infinite;
+}
+
+.cloud-3 {
+  animation: floatCloudRight 16s ease-in-out infinite;
+}
+
+.paw-pos-1 {
+  animation: floatPaw 6s ease-in-out infinite;
+}
+
+.paw-pos-2 {
+  animation: floatPaw 7s ease-in-out 1.5s infinite;
+}
+
+.bone-pos-1 {
+  animation: floatBone 5s ease-in-out 0.8s infinite;
+}
+
+.sparkle-pos-1 {
+  animation: pulseSparkle 4s ease-in-out infinite;
+}
+
+.flower-pos-1 {
+  animation: floatBone 6s ease-in-out 2s infinite;
+}
+
+.dog-friends-cluster {
+  animation: gentlePetBob 5s ease-in-out infinite;
+}
+
+.cottage-group path[stroke="#ffffff"] {
+  animation: smokeRise 3.5s ease-in-out infinite;
+}
+
+/* Accessibility: Disable non-essential animations for users preferring reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cloud-1,
+  .cloud-2,
+  .cloud-3,
+  .paw-pos-1,
+  .paw-pos-2,
+  .bone-pos-1,
+  .sparkle-pos-1,
+  .flower-pos-1,
+  .dog-friends-cluster,
+  .cottage-group path[stroke="#ffffff"] {
+    animation: none !important;
+    transform: none !important;
+  }
+}
