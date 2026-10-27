@@ -1,0 +1,129 @@
+/* Explore Breeds Grid Styles */
+@import './variables.css';
+
+.explore-section {
+  width: 100%;
+  background-color: var(--color-card-bg);
+  border: 2px solid var(--color-canvas-border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.explore-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-text-olive);
+  text-transform: uppercase;
+}
+
+.eyebrow-sparkle {
+  color: var(--color-accent-gold);
+}
+
+.explore-heading {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  margin: 0;
+}
+
+.explore-desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.breed-chip-card {
+  background-color: #fafcf6;
+  border: 1.5px solid var(--color-canvas-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.breed-chip-card:hover {
+  background-color: #f1f7e4;
+  transform: translateY(-2px);
+  border-color: #273754;
+}
+
+.breed-chip-card.active {
+  background-color: #e9f2d5;
+  border-width: 2px;
+  border-color: var(--color-accent-orange);
+  box-shadow: 0 0 0 2px rgba(224, 122, 56, 0.25);
+}
+
+.chip-emoji-wrap {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.chip-text-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chip-name {
+  font-family: var(--font-display);
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chip-desc {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chip-arrow {
+  color: var(--color-text-subtle);
+  opacity: 0.6;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.breed-chip-card:hover .chip-arrow {
+  opacity: 1;
+  transform: translateX(2px);
+  color: var(--color-text-heading);
+}
+
+@media (max-width: 540px) {
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+}
