@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Navbar from './components/Navbar'
 import './styles/layout.css'
 
 export default function App() {
+  const [favoritesCount, setFavoritesCount] = useState(0)
+  const [isFavoritesOpen, setIsFavoritesOpen] = useState(false)
+
   return (
     <div className="app-frame">
       <div className="outer-credit-tag">
@@ -10,7 +14,11 @@ export default function App() {
 
       <div className="site-canvas">
         <header className="canvas-header-region">
-          {/* Header & Announcement Bar */}
+          <Navbar
+            favoritesCount={favoritesCount}
+            onToggleFavorites={() => setIsFavoritesOpen(prev => !prev)}
+            isFavoritesOpen={isFavoritesOpen}
+          />
         </header>
 
         <section className="canvas-hero-region">
