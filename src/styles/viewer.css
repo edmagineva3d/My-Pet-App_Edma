@@ -1,0 +1,229 @@
+/* Dog Image Viewer Showcase (Matching Reference Product Card) */
+@import './variables.css';
+
+.dog-viewer-card {
+  width: 100%;
+}
+
+/* Outer White Card Matting */
+.viewer-frame {
+  background-color: var(--color-card-bg);
+  border: 2px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Main Image Container with 4:3 / square aspect ratio */
+.main-image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f7f9f2;
+  border: 1.5px solid rgba(60, 71, 34, 0.25);
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-dog-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.25s ease;
+  opacity: 0;
+  cursor: zoom-in;
+}
+
+.main-dog-img.loaded {
+  opacity: 1;
+}
+
+.main-dog-img.zoomed {
+  object-fit: contain;
+  cursor: zoom-out;
+  background-color: #273754;
+}
+
+/* Loading Shimmer Overlay */
+.image-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f7ee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.paw-spinner {
+  animation: pawSpinBounce 1.4s ease-in-out infinite;
+  color: var(--color-accent-orange);
+}
+
+@keyframes pawSpinBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+.loading-text {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* Error Fallback */
+.image-error-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #faf5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  gap: 8px;
+  z-index: 5;
+}
+
+.error-dog-icon {
+  color: #c94a4a;
+  margin-bottom: 4px;
+}
+
+.error-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #8c2e2e;
+}
+
+.error-sub {
+  font-size: 0.775rem;
+  color: #634343;
+  max-width: 240px;
+}
+
+.retry-image-btn {
+  margin-top: 8px;
+  background-color: #adc6eb;
+  color: #1d2b45;
+  border: 1.5px solid var(--color-card-border);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.1s ease;
+}
+
+.retry-image-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Zoom Hint Badge */
+.zoom-hint-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid var(--color-card-border);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-canvas-border);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease;
+}
+
+.zoom-hint-badge:hover {
+  transform: scale(1.1);
+}
+
+/* Thumbnail Gallery Strip */
+.thumbnail-strip-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.thumbnail-strip-label {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--color-text-subtle);
+}
+
+.thumbnail-strip {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.thumb-box {
+  aspect-ratio: 1 / 1;
+  border: 1.5px solid var(--color-card-border);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f7f9f2;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.thumb-box:hover {
+  transform: translateY(-2px);
+  border-color: #273754;
+}
+
+.thumb-box.active {
+  border-width: 2.5px;
+  border-color: var(--color-accent-orange);
+  box-shadow: 0 0 0 2px rgba(224, 122, 56, 0.3);
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .viewer-frame {
+    padding: 12px;
+  }
+  .thumbnail-strip {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .thumb-box:nth-child(n+6) {
+    display: none;
+  }
+}
